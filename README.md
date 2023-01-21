@@ -29,12 +29,8 @@ Our health-based web app is a powerful tool for improving health outcomes and em
 # Is our app about Healthcare then?
 Our web-app is not only about healthcare but about `Accessibility` in `Healthcare`.
 
+### Contributors
+<a href="https://github.com/kbshal/Nepali_Ho_Ni_vertex_hacks/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=kbshal/Nepali_Ho_Ni_vertex_hacks" />
+</a>
 
-## Contributors
-<div align="center">
-<a href="https://github.com/ashimdahal" target="_blank" rel="noreferrer"> <img src="/medias/ashim_dahal.jpeg" width="165" /> </a>
-<a href="https://github.com/kbshal" target="_blank" rel="noreferrer"> <img src="/medias/bishal_kharal.jpg" width="165" /> </a> 
-<a href="https://github.com/regmi-saugat" target="_blank" rel="noreferrer"> <img src="medias/saugat_regmi.png" width="165" /> </a>
-<a href="https://github.com/a2-max" target="_blank" rel="noreferrer"> <img src="medias/rijan_neupane.png" width="165" /> </a>
-<br>From Left: Ashim Dahal | Bishal Kharal | Saugat Regmi | Rijan Neupane
-</div> 
