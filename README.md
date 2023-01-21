@@ -32,9 +32,9 @@ Our web-app is not only about healthcare but about `Accessibility` in `Healthcar
 
 ## Contributors
 <div align="center">
-<a href="https://github.com/ashimdahal" target="_blank" rel="noreferrer"> <img src="/medias/ashim_dahal.jpeg" width="161" height="185"/> </a>
-<a href="https://github.com/kbshal" target="_blank" rel="noreferrer"> <img src="/medias/bishal_kharal.jpg" width="161" height="185"/> </a> 
-<a href="https://github.com/regmi-saugat" target="_blank" rel="noreferrer"> <img src="medias/saugat_regmi.png" width="161" height="185"/> </a>
-<a href="https://github.com/a2-max" target="_blank" rel="noreferrer"> <img src="medias/rijan_neupane.png" width="161" height="185"/> </a>
+<a href="https://github.com/ashimdahal" target="_blank" rel="noreferrer"> <img src="/medias/ashim_dahal.jpeg" width="165" /> </a>
+<a href="https://github.com/kbshal" target="_blank" rel="noreferrer"> <img src="/medias/bishal_kharal.jpg" width="165" /> </a> 
+<a href="https://github.com/regmi-saugat" target="_blank" rel="noreferrer"> <img src="medias/saugat_regmi.png" width="165" /> </a>
+<a href="https://github.com/a2-max" target="_blank" rel="noreferrer"> <img src="medias/rijan_neupane.png" width="165" /> </a>
 <br>From Left: Ashim Dahal | Bishal Kharal | Saugat Regmi | Rijan Neupane
 </div> 
