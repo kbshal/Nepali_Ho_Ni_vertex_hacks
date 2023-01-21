@@ -1,10 +1,3 @@
-
-# Team Nepali Ho Ni
-
-Play our team anthem
-
-https://user-images.githubusercontent.com/49745633/213660082-dffb293d-1a29-4f7d-8b5d-71f364b9581f.mp4
-
 # Welcome Note
 
 This is the official repo for Nepali Ho Ni's final submission to Vertex Hacks Chapter Alpha. Let's have some fun first. 
