@@ -93,7 +93,7 @@ def main():
         else:
             i = get_input(inp)
         token = 'test'
-        out = talk("Hi",False,"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")
+        out = talk("Hi",False,"HeHe")
         print('bot: ',out)
 
 if __name__ == '__main__':
