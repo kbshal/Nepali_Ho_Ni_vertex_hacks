@@ -4,7 +4,11 @@ import os
 
 app = Flask(__name__)
 
-@app.route('/api',methods=['POST'])
+@app.route('/')
+def home():
+    return "Congrats Nothing Broke"
+
+@app.route('/jelly/api',methods=['POST'])
 def response():
     from conversation import talk
     try:
