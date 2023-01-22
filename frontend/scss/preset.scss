@@ -1,0 +1,13 @@
+$pcolor: #34a8eb;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' sans-serif;
+}
+
+.btn:hover{
+    background-color: $pcolor;
+    color: #000;
+}
