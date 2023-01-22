@@ -1,14 +1,14 @@
 from flask import Flask, render_template, request, jsonify, make_response
 import json
 import os
-
+from flask_cors import CORS,cross_origin
 app = Flask(__name__)
 
 @app.route('/')
 def home():
     return "Congrats Nothing Broke"
 
-@app.route('/jelly/api',methods=['POST'])
+@app.route('/jelly',methods=['POST'])
 def response():
     from conversation import talk
     try:
