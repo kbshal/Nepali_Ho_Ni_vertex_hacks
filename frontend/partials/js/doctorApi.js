@@ -17,7 +17,7 @@ const getData = async() => {
             </div>
             `;
             
-        console.log(data[i].image);
+        // console.log(data[i].image);
         $("#doctor-container").append(drCard);
         }
     } catch (error) {
