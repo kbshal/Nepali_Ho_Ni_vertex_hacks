@@ -1,4 +1,6 @@
-# Welcome Note
+# <p align="center"> Nepali Ho Ni</p>
+
+## Doctor Ho Ni
 
 This is the official repo for Nepali Ho Ni's final submission to Vertex Hacks Chapter Alpha. Let's have some fun first. 
 ## Why don't you play our team anthem
