@@ -180,6 +180,8 @@ body {
 .chat-box {
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1333333333);
   height: 100%;
   width: 100%;
   max-width: 400px;
