@@ -31,8 +31,16 @@ Our health-based web app is a powerful tool for improving health outcomes and em
 # Is our app about Healthcare then?
 Our web-app is not only about healthcare but about `Accessibility` in `Healthcare`.
 
+------
+
 ### Contributors
 <a href="https://github.com/kbshal/Nepali_Ho_Ni_vertex_hacks/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=kbshal/Nepali_Ho_Ni_vertex_hacks" />
 </a>
 
+------
+
+### References
+- **AKSHAT DUBEY** : Diabetic Retinopathy Detection and Classification
+- **MEDIANO SANDIE** : Skin Disease Classification on Dermnet Dataset
+- **Facebook Blender Bot**
