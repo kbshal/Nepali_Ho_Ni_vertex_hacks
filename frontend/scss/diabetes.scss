@@ -1,0 +1,59 @@
+$pcolor: #34a8eb;
+
+.header-container{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    .bg{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0008;
+        z-index: 2;
+    }
+    h2{
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 53px;
+
+    }
+    .test-button{
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-decoration: none;
+        color: #000;
+        background-color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 20px;
+        z-index: 999;
+        cursor: pointer;
+    }
+    .test-button:hover{
+        background-color: $pcolor;
+        transition: .3s all ease-in-out;
+    }
+
+}
+
+#my_camera {
+    width: 320px;
+    height: 240px;
+    border: 1px solid black;
+}
