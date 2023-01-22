@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepali Ho Ni</title>
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../partials/css/preset.css">
+    <link rel="stylesheet" href="../partials/css/style.css">
+    <link rel="stylesheet" href="../partials/css/hospitals.css">
+</head>
+
+<body>
+
+    <!-- chat box -->
+    <div class="chat-icon">
+        <i class="fa-solid fa-message"></i>
+    </div>
+    <div class="chat-box chat-box-hide">
+        <div class="chat-header">
+            <img src="../partials/images/nepalihoni.jpg" alt="">
+            <div class="name-and-status">
+                <h4 class="name">Doctor Ho Ni</h4>
+                <p class="status">Active Now</p>
+            </div>
+            <div class="cross">
+                <i class="fa-solid fa-xmark close-chat"></i>
+            </div>
+        </div>
+
+        <!-- chat body  -->
+        <div class="chat-body" id="chat-body">
+            <span class="received-msg">Namaskar, ma Jelly. Malai romanized Nepali athawa angrezi bhasa ma bartalaap
+                garna man lagxa. Aaunus hamro chalphal suru garum.</span>
+            <!-- <span class="sent-msg">Hello World! Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, quia.</span> -->
+        </div>
+
+        <!-- chat typing -->
+        <form method="post" id="formm" autocomplete="off" class="chat-input-container">
+            <input id="textInput" type="text" placeholder="Write a mesage..." required>
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+    </div>
+    <!-- chat box ends here -->
+
+
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Doctor Ho Ni</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/diabetes.html">Diabetes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hospital Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/doctors.html">Find Doctors</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-submit-nav" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- nav bar ends here -->
+
+    <div class="site-wrapper">
+        <div class="wrapper-container">
+            <!-- <h1 class="heading mt-5">Find Nearby Hospitals</h1>
+            <div class="map-area">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56524.75710019266!2d85.30153385!3d27.692658549999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e6!4m0!4m0!5e0!3m2!1sen!2snp!4v1674308981950!5m2!1sen!2snp"
+                     style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+            </div> -->
+
+            <h1 class="heading mt-5">Hospital Details</h1>
+
+            <!-- table -->
+            <table class="table table-striped table-hover mt-3">
+                <thead>
+                    <tr>
+                        <th>S.N</th>
+                        <th>Hospital's Name</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+              </table>
+            <!-- table ends here -->
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="../partials/js/script.js"></script>
+    <script src="../partials/js/hospitalApi.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

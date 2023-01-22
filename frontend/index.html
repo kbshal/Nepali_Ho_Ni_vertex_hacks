@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepali Ho Ni</title>
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="partials/css/preset.css">
+    <link rel="stylesheet" href="partials/css/style.css">
+</head>
+
+<body>
+
+    <!-- chat box -->
+    <div class="chat-icon">
+        <i class="fa-solid fa-message"></i>
+    </div>
+    <div class="chat-box chat-box-hide">
+        <div class="chat-header">
+            <img src="../partials/images/nepalihoni.jpg" alt="">
+            <div class="name-and-status">
+                <h4 class="name">Doctor Ho Ni</h4>
+                <p class="status">Active Now</p>
+            </div>
+            <div class="cross">
+                <i class="fa-solid fa-xmark close-chat"></i>
+            </div>
+        </div>
+
+        <!-- chat body  -->
+        <div class="chat-body" id="chat-body">
+            <span class="received-msg">Namaskar, ma Jelly. Malai romanized Nepali athawa angrezi bhasa ma bartalaap
+                garna man lagxa. Aaunus hamro chalphal suru garum.</span>
+            <!-- <span class="sent-msg">Hello World! Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, quia.</span> -->
+        </div>
+
+        <!-- chat typing -->
+        <form method="post" id="formm" autocomplete="off" class="chat-input-container">
+            <input id="textInput" type="text" placeholder="Write a mesage..." required>
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+    </div>
+    <!-- chat box ends here -->
+
+
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Doctor Ho Ni</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/diabetes.html">Diabetes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/hospitals.html">Hospital Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/doctors.html">Find Doctors</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-submit-nav" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- nav bar ends here -->
+    <div class="site-wrapper">
+        <div class="wrapper-container">
+            <div class="hero">
+                <div class="left">
+                    <!-- <img src="partials/images/bg-browser.webp" alt="" class="hero-bg"> -->
+                    <!-- <p class="particles"><i class="fa-sharp fa-solid fa-xmark"></i></p>
+                    <p class="particles particle2"><i class="fa-regular fa-circle"></i></p> -->
+                    <h1>Trustworthy care for a healthier you.</h1>
+                    <p>We are committed to providing you with the resources and support you need to achieve optimal health
+                        and wellness.</p>
+                    <a href="#" class="button">Get Started</a>
+                </div>
+                <div class="right">
+                    <img src="partials/images/herohealth.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CountDown JS -->
+    <script src="partials/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- <script src="partials/js/chatbot.js"></script> -->
+    <script>
+        var frm = $('#formm');
+
+        frm.submit(function (e) {
+
+            e.preventDefault();
+            var userInput = $("#textInput").val()
+            // since the model processing takes some time, its a good idea to print the 
+            // user's input before sending it to the model
+
+            print_user_input(userInput)
+            // check if the global variable out is defined or not
+            // out is the output of the model which is in the following format
+
+            // {'generated_text': ' Hi, how are you? I just got back from walking my dog. 
+            //                      Do you have any pets?', 
+            // 'conversation': {
+            //  'generated_responses': [' Hi, how are you? I just got back from walking my dog. 
+            //                            Do you have any pets?'], 
+            // 'past_user_inputs': ['Hello']}}
+            if (typeof out !== 'undefined') {
+                send_this = {
+                    "text": userInput,
+                    "previous_conversaion": out['conversation']
+                }
+            }
+            // if the global variable is not defined then its the first time that the model is
+            // about to be invoked
+            else {
+                send_this = {
+                    "text": userInput,
+                    "previous_conversaion": false
+                }
+            }
+            // basic ajax again. then made it readonly for spam proffing
+            $("#textInput").val("The model is loading... Please Wait a sec!");
+            console.log(send_this)
+            document.getElementById('textInput').readOnly = true
+            $.ajax({
+                type: 'post',
+                // url: frm.attr('action'),
+                url: "https://api.thetwl.org/jelly",
+                contentType: 'application/json',
+                dataType: 'json',
+                data: JSON.stringify(send_this),
+
+                success: function (output) {
+                    // declaring the global variable inside a function
+                    window.out = output
+                    print_bot_response(output['generated_text'])
+                    console.log(output)
+                    // allow use to write message again
+                    $("#textInput").val("");
+                    document.getElementById('textInput').readOnly = false
+
+                },
+                error: function (data) {
+                    console.log('An error occurred.');
+                    console.log(data);
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>

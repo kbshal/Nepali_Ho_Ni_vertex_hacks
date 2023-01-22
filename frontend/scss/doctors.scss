@@ -1,0 +1,51 @@
+$pcolor: #34a8eb;
+
+.doctor-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0;
+
+    .doctor-card{
+        width: 300px;
+        padding: 40px 20px 50px 20px;
+        border: 1px solid #0003;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 3px 3px 10px #0002;
+
+        img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .name{
+            margin-top: 10px;
+            text-align: center;
+        }
+        .contact{
+            text-decoration: none;
+            margin-top: 20px;
+            padding: 5px 20px;
+            border: 1px solid #0003;
+            border-radius: 5px;
+            color: #000;
+        }
+        .contact:hover{
+            background-color: $pcolor;
+            transition: all .3s ease-in-out;
+        }
+    }
+    .doctor-card:hover{
+        transform: translateY(-20px);
+        transition: all .3s ease-in-out;
+    }
+}
