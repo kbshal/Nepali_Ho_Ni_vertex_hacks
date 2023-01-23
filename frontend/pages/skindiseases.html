@@ -18,7 +18,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../partials/css/preset.css">
     <link rel="stylesheet" href="../partials/css/style.css">
-    <link rel="stylesheet" href="../partials/css/hospitals.css">
+    <link rel="stylesheet" href="../partials/css/diabetes.css">
 </head>
 
 <body>
@@ -70,10 +70,10 @@
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../pages/diabetes.html">Diabetes</a>
+                        <a class="nav-link" href="#">Diabetes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Hospital Details</a>
+                        <a class="nav-link" href="../pages/hospitals.html">Hospital Details</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../pages/doctors.html">Find Doctors</a>
@@ -81,6 +81,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../pages/skindiseases.html">Skin Diseases</a>
                     </li>
+
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -92,44 +93,58 @@
 
     <!-- nav bar ends here -->
 
-    <div class="site-wrapper">
-        <div class="wrapper-container">
-            <!-- <h1 class="heading mt-5">Find Nearby Hospitals</h1>
-            <div class="map-area">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56524.75710019266!2d85.30153385!3d27.692658549999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e6!4m0!4m0!5e0!3m2!1sen!2snp!4v1674308981950!5m2!1sen!2snp"
-                     style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
-            </div> -->
+    <div class="header-container">
+        <img src="../partials/images/skin.jpg" alt="" class="bg">
+        <div class="overlay"></div>
+        <h2 class="heading">Test Your Skin Diseases with our AI Tools!</h2>
+        <!-- <a href="#" class="button">Test Now</a> -->
 
-            <h1 class="heading mt-5">Hospital Details</h1>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary test-button" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">
+            Test Now
+        </button>
 
-            <!-- table -->
-            <table class="table table-striped table-hover mt-3">
-                <thead>
-                    <tr>
-                        <th>S.N</th>
-                        <th>Hospital's Name</th>
-                        <th>Location</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Scan Your Skin</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- form  -->
+                        <form id="camera" class="mt-2" autocomplete="off">
+                            <input type="file" id="upload"><br>
+                            <input type="submit" value="Upload" class="btn btn-outline-success mt-2">
+                        </form>
 
-                </tbody>
-            </table>
-            <!-- table ends here -->
+                        <!-- <input id="imageinput" type="file" name="image" onchange="readUrl(this)">
+                        <button name="send" id = "sendbutton">Send</button>
+                        <img id="imagebox" src=""> -->
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- JS -->
     <script src="../partials/js/script.js"></script>
-    <script src="../partials/js/hospitalApi.js"></script>
+    <!-- <script src="../partials/js/cam.js"></script> -->
+    <script src="../partials/js/webcam.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <!-- <script src="partials/js/chatbot.js"></script> -->
+
     <script>
         var frm = $('#formm');
 
@@ -192,6 +207,52 @@
                 },
             });
         });
+
+
+        // converting image to base64
+        const fileInput = document.getElementById("upload");
+        const formcamera = $('#camera');
+
+        var form = $('#camera');
+
+        form.submit(function (e) {
+
+            e.preventDefault();
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+
+            reader.addEventListener("load", () => {
+                const hashedImg = reader.result;
+                const splittedHashed = hashedImg.split(",");
+                // console.log(splittedHashed[1]);
+
+                msgToSend = {
+                "img": splittedHashed[1]
+            }
+            console.log(msgToSend);
+            $.ajax({
+                type: 'post',
+                url: "https://api.thetwl.org/diabetees",
+                contentType: 'application/json',
+                dataType: 'json',
+                data: msgToSend,
+
+                success: function (output) {
+                    console.log(output)
+                },
+                error: function (data) {
+                    console.log('An error occurred.');
+                    console.log(data);
+                },
+            });
+            });
+            reader.readAsDataURL(file);
+
+            // Sending Base64 Image to API using AJAX
+
+          
+        });
+
     </script>
 </body>
 
