@@ -25,7 +25,7 @@ const getData = async() => {
         // looping doctors data
 
         
-        for(let i=1; i<=100; i++){
+        for(let i=1; i<=70; i++){
             // processing address to skip repetaion
             let address = data[i].address;
         
@@ -33,7 +33,7 @@ const getData = async() => {
             <tr>
             <td>${i}</td>
             <td>${data[i].name}</td>
-            <td>${data[i].address.split(" ")[0]}</td>
+            <td>${data[i].address.split(" ")[0].split(",")[0]}</td>
             </tr>
             `;
 
